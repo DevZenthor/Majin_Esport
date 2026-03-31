@@ -4,23 +4,34 @@ export default function HeroWolf() {
   return (
     <section id="home" className="h-screen flex flex-col justify-center items-center relative overflow-hidden">
 
-      <div className="absolute inset-0">
+      {/* 🔥 BACKGROUND PRO */}
+      <div className="absolute inset-0 -z-10">
 
-        <div className="hero-glow"></div>
+        {/* base */}
+        <div className="absolute inset-0 bg-[#050505]" />
 
-        <div className="absolute w-[450px] h-[450px] border border-[#06A3FA]/30 rounded-full spin-slow"></div>
+        {/* lumières */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,#06A3FA15,transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,#F89A0510,transparent_50%)]"></div>
 
-        <div className="absolute w-[550px] h-[550px] border border-[#F89A05]/20 rounded-full spin-reverse"></div>
+        {/* grille */}
+        <div className="absolute inset-0 grid-bg opacity-[0.15]"></div>
 
-        <div className="absolute w-[400px] h-[2px] bg-[#06A3FA] rotate-45 top-1/3 left-1/4 blur-md animate-pulse"></div>
-        <div className="absolute w-[400px] h-[2px] bg-[#F89A05] -rotate-45 bottom-1/3 right-1/4 blur-md animate-pulse"></div>
-
-        <div className="particles"></div>
+        {/* ligne centrale */}
+        <div className="absolute top-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-[#06A3FA]/40 to-transparent blur-sm"></div>
 
       </div>
 
-      <img src={logo} className="w-56 z-10 drop-shadow-[0_0_40px_#06A3FA] hover:scale-110 transition"/>
+      {/* halo */}
+      <div className="absolute w-[400px] h-[400px] bg-[#06A3FA]/10 blur-[120px] rounded-full"></div>
 
+      {/* logo */}
+      <img
+        src={logo}
+        className="w-56 z-10 soft-glow drop-shadow-[0_0_40px_#06A3FA] hover:scale-105 transition duration-500"
+      />
+
+      {/* titre */}
       <h1 className="mt-6 text-6xl font-extrabold tracking-widest z-10">
         <span className="text-white">MA</span>
         <span className="text-[#06A3FA]">J</span>

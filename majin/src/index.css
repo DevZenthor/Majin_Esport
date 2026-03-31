@@ -3,7 +3,7 @@
 :root {
   --primary: #06A3FA;
   --secondary: #F89A05;
-  --bg: #0a0a0a;
+  --bg: #050505;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
   overflow-x: hidden;
 }
 
-/* 🔥 SCROLLBAR */
+/* SCROLLBAR PRO */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -20,6 +20,19 @@ body {
   background: linear-gradient(180deg, #06A3FA, #00eaff);
   border-radius: 20px;
   box-shadow: 0 0 15px #06A3FA;
+}
+
+/* GLOW */
+.soft-glow {
+  box-shadow: 0 0 120px rgba(6,163,250,0.15);
+}
+
+/* PARTICLES GRID */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
 /* HERO */
