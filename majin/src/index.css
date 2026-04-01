@@ -28,7 +28,7 @@ img {
 }
 
 /* ========================= */
-/* 🏷 TITLES PRO */
+/* 🏷 TITLES */
 /* ========================= */
 .section-title {
   font-size: 42px;
@@ -42,7 +42,6 @@ img {
   color: var(--primary);
 }
 
-/* ligne stylée */
 .section-title::after {
   content: "";
   width: 80px;
@@ -119,6 +118,7 @@ img {
 }
 
 .webtv-player {
+  position: relative;
   height: 650px;
   border-radius: 16px;
   overflow: hidden;
@@ -149,29 +149,83 @@ img {
 }
 
 /* ========================= */
-/* 📱 RESPONSIVE */
+/* 🧠 ABOUT */
 /* ========================= */
+.about-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px;
+  position: relative;
+  overflow: hidden;
+}
 
+.about-hero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(6,163,250,0.15), transparent 70%);
+  filter: blur(120px);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.about-logo {
+  width: 180px;
+}
+
+.about-text-block {
+  max-width: 500px;
+}
+
+.about-title-main {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.about-title-main span {
+  color: var(--primary);
+}
+
+.about-desc {
+  margin-top: 15px;
+  color: #aaa;
+}
+
+/* ========================= */
+/* 📱 GLOBAL RESPONSIVE */
+/* ========================= */
 @media (max-width: 900px) {
 
-  /* TITRES */
   .section-title {
     font-size: 28px;
   }
 
-  /* NEWS */
   .news-grid {
     grid-template-columns: 1fr !important;
   }
 
-  /* CALENDAR */
   .calendar-card {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
 
-  /* WEBTV */
   .webtv-container {
     grid-template-columns: 1fr;
   }
@@ -179,6 +233,20 @@ img {
   .webtv-player,
   .webtv-chat {
     height: 300px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .about-logo {
+    width: 120px;
+  }
+
+  .about-title-main {
+    font-size: 32px;
   }
 
 }
